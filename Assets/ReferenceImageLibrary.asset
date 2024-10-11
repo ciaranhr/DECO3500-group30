@@ -27,3 +27,13 @@ MonoBehaviour:
     m_SpecifySize: 0
     m_Name: TheLastSupper
     m_Texture: {fileID: 2800000, guid: 9c8dce44b3b6c504098b7c4a61ec2a89, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4737246675577637414
+      m_GuidHigh: 14104407353171189398
+    m_SerializedTextureGuid:
+      m_GuidLow: 15453226026441766114
+      m_GuidHigh: 2474709207002760153
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: MonaLisa
+    m_Texture: {fileID: 2800000, guid: 43e1f4e2e332d674d9c3c985e9ee5722, type: 3}

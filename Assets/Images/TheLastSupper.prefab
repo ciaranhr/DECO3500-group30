@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheLastSupper
       objectReference: {fileID: 0}
+    - target: {fileID: 1966507901103908256, guid: 7e72175810f4b3544953052397e78bc6, type: 3}
+      propertyPath: m_TagString
+      value: TheLastSupper
+      objectReference: {fileID: 0}
     - target: {fileID: 3381333392753421103, guid: 7e72175810f4b3544953052397e78bc6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

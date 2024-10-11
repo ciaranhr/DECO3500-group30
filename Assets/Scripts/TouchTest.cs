@@ -5,7 +5,7 @@ using UnityEngine;
 public class TouchTest : MonoBehaviour
 {
     public GameObject infoPopup;
-
+    private GameObject instance;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,28 +26,23 @@ public class TouchTest : MonoBehaviour
                 Debug.Log("hit");
                 Debug.Log(hit.transform.name + " : " + hit.transform.tag);
 
-                if (hit.transform.tag == "ZX81")
+                if (hit.transform.tag == "MonaLisa")
                 {
-                    Vector3 pos = hit.point;
-                    pos.z += 0.25f;
-                    pos.y += 0.25f;
-                    Instantiate(UITest, pos, transform.rotation);
+                    if (instance == null) 
+                    {
+                        Vector3 pos = hit.point;
+                        pos.z += 0.25f;
+                        pos.y += 0.25f;
+                        instance = Instantiate(infoPopup, pos, transform.rotation);
+                 
+                    }
+                    else if (instance != null)
+                    {
+                        Destroy(instance);
+                    }
+                
                 }
-
-                if (hit.transform.tag == "frogger")
-                {
-                    Vector3 pos = hit.point;
-                    pos.z += 0.25f;
-                    pos.y += 0.25f;
-                    Instantiate(froggerVid, pos, transform.rotation);
-                }
-
-                if (hit.transform.tag == "Info")
-                {
-                    Destroy(hit.transform.gameObject);
-                }
-
-                if (hit.transform.tag == "FroggerVid")
+                if (hit.transform.tag == "RuleOfThirdsInfo")
                 {
                     Destroy(hit.transform.gameObject);
                 }

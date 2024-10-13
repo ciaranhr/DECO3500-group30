@@ -79,6 +79,7 @@ public class ImageTracker : MonoBehaviour
         //Create object based on image tracked
         foreach (var trackedImage in eventArgs.added)
         {
+            Debug.Log("Image Recognised");
             foreach (var arPrefab in arPrefabs)
             {
                 if (trackedImage.referenceImage.name == arPrefab.name)
@@ -116,6 +117,9 @@ public class ImageTracker : MonoBehaviour
 
     void Update()
     {
+        GameObject activeChild;
+        GameObject hitTargetParent;
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -124,8 +128,8 @@ public class ImageTracker : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100))
             {
                 Debug.Log(hit.transform.name + " : " + hit.transform.tag);
-                GameObject hitTargetParent = hit.transform.parent.gameObject;
-                GameObject activeChild = GetActiveChild(hitTargetParent);
+                hitTargetParent = hit.transform.parent.gameObject;
+                activeChild = GetActiveChild(hitTargetParent);
                 if (hit.transform.tag == "Composition")
                 {
                     if (activeChild.name != "default")

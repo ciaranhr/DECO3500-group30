@@ -12,6 +12,7 @@ TagManager:
   - Composition
   - CompostionBreakdown
   - ColourBreakdown
+  - SendBall
   layers:
   - Default
   - TransparentFX

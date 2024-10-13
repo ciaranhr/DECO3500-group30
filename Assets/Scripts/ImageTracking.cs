@@ -88,6 +88,7 @@ public class ImageTracker : MonoBehaviour
                     ARObjects.Add(newPrefab);
                     GetChild(newPrefab, "ColourInfo").SetActive(false);
                     GetChild(newPrefab, "CompositionExtra1").SetActive(false);
+                    GetChild(newPrefab, "SendBall").SetActive(false);
                     /*
                     newPrefab = Instantiate(GetChild(arPrefab, "Send"), trackedImage.transform);
                     ARObjects.Add(newPrefab);
@@ -137,7 +138,14 @@ public class ImageTracker : MonoBehaviour
                 }
 
                 else if (hit.transform.tag == "Send")
-                { 
+                {
+                    if (activeChild.name != "SendBall")
+                    {
+                        activeChild.SetActive(false);
+                        GetChild(hitTargetParent, "SendBall").SetActive(true);
+
+                    }
+                    activeChild = GetActiveChild(hitTargetParent);
                 }
 
                 else if (hit.transform.tag == "Colours")

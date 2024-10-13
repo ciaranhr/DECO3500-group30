@@ -87,6 +87,7 @@ public class ImageTracker : MonoBehaviour
                     var newPrefab = Instantiate(arPrefab, trackedImage.transform);
                     ARObjects.Add(newPrefab);
                     GetChild(newPrefab, "ColourInfo").SetActive(false);
+                    GetChild(newPrefab, "CompositionExtra1").SetActive(false);
                     /*
                     newPrefab = Instantiate(GetChild(arPrefab, "Send"), trackedImage.transform);
                     ARObjects.Add(newPrefab);

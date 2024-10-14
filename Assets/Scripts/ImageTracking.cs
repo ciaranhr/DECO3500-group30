@@ -13,6 +13,9 @@ public class ImageTracker : MonoBehaviour
     public GameObject infoPopup;
     private GameObject instance;
 
+    private Vector2 startMousePos;
+    private Vector2 endMousePos;
+    private float swipeThreshold = 50f;
 
     List<GameObject> ARObjects = new List<GameObject>();
 
@@ -115,6 +118,9 @@ public class ImageTracker : MonoBehaviour
         } 
     }
 
+    private void DetectSwipe() {
+
+    }
     void Update()
     {
         GameObject activeChild;
@@ -122,6 +128,7 @@ public class ImageTracker : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            startMousePos = Input.mousePosition;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -162,7 +169,9 @@ public class ImageTracker : MonoBehaviour
                     }
                     activeChild = GetActiveChild(hitTargetParent);
                 }
+                else if (hit.transform.tag == "sendBall") {
 
+                }
             if (hit.transform.tag == "RuleOfThirdsInfo")
                 {
                     Destroy(hit.transform.gameObject);

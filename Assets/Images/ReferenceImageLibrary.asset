@@ -37,3 +37,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: MonaLisa
     m_Texture: {fileID: 2800000, guid: 68c9ce8958d45c74988ed046d8c0c412, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5289914651118176388
+      m_GuidHigh: 8166196490282373780
+    m_SerializedTextureGuid:
+      m_GuidLow: 6436844543464752183
+      m_GuidHigh: 14933392030775429211
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: MapIcon
+    m_Texture: {fileID: 2800000, guid: 27a0c437440259545bc80476ee103ecf, type: 3}

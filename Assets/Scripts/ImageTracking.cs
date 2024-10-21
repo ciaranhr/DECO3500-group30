@@ -8,11 +8,12 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ImageTracker : MonoBehaviour
 {
+    public GameObject museum;
     private ARTrackedImageManager trackedImages;
     public GameObject[] arPrefabs;
     public GameObject infoPopup;
     private GameObject instance;
-
+    private ARAnchorManager anchorManager;
 
     List<GameObject> ARObjects = new List<GameObject>();
 
@@ -124,7 +125,6 @@ public class ImageTracker : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-
             if (Physics.Raycast(ray, out hit, 100))
             {
                 Debug.Log(hit.transform.name + " : " + hit.transform.tag);
@@ -161,6 +161,10 @@ public class ImageTracker : MonoBehaviour
                         
                     }
                     activeChild = GetActiveChild(hitTargetParent);
+                } else if (hit.transform.tag == "Floor")
+                {
+                    GameObject newObject = Instantiate(museum, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                    newObject.SetActive(true);
                 }
 
             if (hit.transform.tag == "RuleOfThirdsInfo")
@@ -168,6 +172,10 @@ public class ImageTracker : MonoBehaviour
                     Destroy(hit.transform.gameObject);
                 }
             }
+
+            
+
+
         }
     }
 }

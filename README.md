@@ -38,12 +38,23 @@ An Augmented Reality (AR) app developed in Unity that enhances art museum goers 
 
 ## Running the App
 1. Connect your device via USB and ensure it is registered in your Apple Developer account.
+2. Make sure your phone is in Developer Mode - under Privacy & Security.
 
-2. Build and Run:
+4. Build and Run:
 - Go to File/ Build and Run.
+- Select yes, when ask about the Project ID.
 - Unity will build the project and deploy it to your connected device.
+- If there are issues with the bundle identifier, edit the bundle identifier
+- Make sure your account is selected under Team in Signing & Capabilities
+- On your phone allow the app under General/ VPN & Device Management
 
 ## Usage
 - Launch the app on your device.
 - Grant permissions for camera and AR functionality.
 - Scan image of [Mona Lisa](https://drive.google.com/file/d/1CgLZPE-Db8RuFAbgdLhvo8hUU0qOfNp6/view?usp=sharing)
+
+## References
+Gupta, H. (2024, July 2). Himankgupta1/Unity-AR-Application: Discover the possibilities of Augmented Reality (AR) with Unity-AR-App. This demo application demonstrates basic AR capabilities through interactive 3D models in a virtual environment. Deployed on Android, with visuals provided for a preview. Unity-AR-Application. https://github.com/himankgupta1/Unity-AR-Application/tree/main
+samyam (Director). (2022, December 13). How to Build & Run Unity to iOS for Testing [Video recording]. https://www.youtube.com/watch?v=-Hr4-XNCf8Y
+![image](https://github.com/user-attachments/assets/338035da-cfa2-4781-9229-17d20280617d)
+

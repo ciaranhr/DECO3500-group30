@@ -55,6 +55,6 @@ An Augmented Reality (AR) app developed in Unity that enhances art museum goers 
 
 ## References
 Gupta, H. (2024, July 2). Himankgupta1/Unity-AR-Application: Discover the possibilities of Augmented Reality (AR) with Unity-AR-App. This demo application demonstrates basic AR capabilities through interactive 3D models in a virtual environment. Deployed on Android, with visuals provided for a preview. Unity-AR-Application. https://github.com/himankgupta1/Unity-AR-Application/tree/main
+
 samyam (Director). (2022, December 13). How to Build & Run Unity to iOS for Testing [Video recording]. https://www.youtube.com/watch?v=-Hr4-XNCf8Y
 ![image](https://github.com/user-attachments/assets/338035da-cfa2-4781-9229-17d20280617d)
-

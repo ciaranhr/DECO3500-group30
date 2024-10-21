@@ -173,6 +173,7 @@ public class ImageTracker : MonoBehaviour
                     GameObject newObject = Instantiate(museum, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
                     newObject.SetActive(true);
                 }
+
                 else if (hit.transform.tag == "sendBall") {
 
                 }

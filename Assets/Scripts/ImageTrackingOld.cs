@@ -5,7 +5,7 @@ using System.Linq;
 
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-
+/*
 public class ImageTracker : MonoBehaviour
 {
     public GameObject museum;
@@ -98,7 +98,7 @@ public class ImageTracker : MonoBehaviour
                     ARObjects.Add(newPrefab);
                     newPrefab = Instantiate(GetChild(arPrefab, "Default"), trackedImage.transform);
                     ARObjects.Add(newPrefab);
-                   */
+                   *//*
                 }
             }
         }
@@ -179,3 +179,4 @@ public class ImageTracker : MonoBehaviour
         }
     }
 }
+*/

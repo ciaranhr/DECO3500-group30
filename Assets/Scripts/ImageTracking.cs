@@ -13,7 +13,10 @@ public class ImageTracker : MonoBehaviour
     public GameObject[] arPrefabs;
     public GameObject infoPopup;
     private GameObject instance;
-    private ARAnchorManager anchorManager;
+
+    private Vector2 startMousePos;
+    private Vector2 endMousePos;
+    private float swipeThreshold = 50f;
 
     List<GameObject> ARObjects = new List<GameObject>();
 
@@ -116,6 +119,9 @@ public class ImageTracker : MonoBehaviour
         } 
     }
 
+    private void DetectSwipe() {
+
+    }
     void Update()
     {
         GameObject activeChild;
@@ -123,6 +129,7 @@ public class ImageTracker : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            startMousePos = Input.mousePosition;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100))
@@ -166,7 +173,9 @@ public class ImageTracker : MonoBehaviour
                     GameObject newObject = Instantiate(museum, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
                     newObject.SetActive(true);
                 }
+                else if (hit.transform.tag == "sendBall") {
 
+                }
             if (hit.transform.tag == "RuleOfThirdsInfo")
                 {
                     Destroy(hit.transform.gameObject);
